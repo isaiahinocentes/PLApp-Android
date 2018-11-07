@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_picture_search"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="plapp.plapp.PictureSearch">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        tools:ignore="UselessParent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <ProgressBar
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/progressBar"
+                android:layout_gravity="center"
+                android:elevation="@dimen/text_marginTop"
+                android:max="100"
+                android:visibility="visible" />
+
+            <RelativeLayout
+                android:layout_width="280dp"
+                android:layout_height="match_parent"
+                android:id="@+id/rel1"
+                android:clickable="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:focusableInTouchMode="true"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tst1"
+                    android:paddingTop="2dp"
+                    android:text="RESULT 1"
+                    android:lines="1"
+                    android:focusableInTouchMode="true"
+                    android:textAppearance="?android:textAppearanceSmall"
+                    android:clickable="true"
+                    android:textColor="#C1C1C1"
+
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#6caf1d"
+                    android:lines="1"
+                    android:layout_marginTop="50dp"
+                    android:id="@+id/matchRes1"
+                    android:text="@string/large_text"
+                    android:layout_below="@+id/txtRes1"
+                    android:textSize="12sp"
+                    android:ellipsize="end"
+                    android:gravity="right"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtRes1"
+                    android:paddingTop="2dp"
+                    android:text="Place Holder"
+                    android:lines="1"
+                    android:focusableInTouchMode="true"
+                    android:textColor="#6caf1d"
+
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:clickable="true"
+                    android:layout_below="@+id/imgRes1"
+                    android:layout_alignParentStart="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="20dp"
+                    android:lines="3"
+                    android:id="@+id/charRes1"
+                    android:text="@string/large_text"
+                    android:textSize="12sp"
+                    android:ellipsize="end"
+                    android:layout_below="@+id/txtRes1"
+                    android:layout_alignStart="@+id/txtRes1" />
+
+                <ImageView
+                    android:layout_width="280dp"
+                    android:layout_height="280dp"
+                    android:id="@+id/imgRes1"
+                    android:clickable="true"
+                    android:focusableInTouchMode="true"
+                    android:layout_below="@+id/tst1"
+                    android:layout_alignParentStart="true" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="280dp"
+                android:layout_height="match_parent"
+                android:id="@+id/rel2"
+                android:clickable="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:focusableInTouchMode="true"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tst2"
+                    android:paddingTop="2dp"
+                    android:text="RESULT 2"
+                    android:lines="1"
+                    android:focusableInTouchMode="true"
+                    android:textAppearance="?android:textAppearanceSmall"
+                    android:clickable="true"
+                    android:textColor="#C1C1C1"
+
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#6caf1d"
+                    android:lines="1"
+                    android:layout_marginTop="50dp"
+                    android:id="@+id/matchRes2"
+                    android:text="@string/large_text"
+                    android:layout_below="@+id/txtRes2"
+                    android:textSize="12sp"
+                    android:ellipsize="end"
+                    android:gravity="right"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtRes2"
+                    android:paddingTop="2dp"
+                    android:text="Place Holder"
+                    android:lines="1"
+                    android:focusableInTouchMode="true"
+                    android:textColor="#6caf1d"
+
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:clickable="true"
+                    android:layout_below="@+id/imgRes2"
+                    android:layout_alignParentStart="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="20dp"
+                    android:lines="3"
+                    android:id="@+id/charRes2"
+                    android:text="@string/large_text"
+                    android:textSize="12sp"
+                    android:ellipsize="end"
+                    android:layout_below="@+id/txtRes2"
+                    android:layout_alignStart="@+id/txtRes2" />
+
+                <ImageView
+                    android:layout_width="280dp"
+                    android:layout_height="280dp"
+                    android:id="@+id/imgRes2"
+                    android:clickable="true"
+                    android:focusableInTouchMode="true"
+                    android:layout_below="@+id/tst2"
+                    android:layout_alignParentStart="true" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="280dp"
+                android:layout_height="match_parent"
+                android:id="@+id/rel3"
+                android:clickable="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp"
+                android:focusableInTouchMode="true"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tst3"
+                    android:paddingTop="2dp"
+                    android:text="RESULT 3"
+                    android:lines="1"
+                    android:focusableInTouchMode="true"
+                    android:textAppearance="?android:textAppearanceSmall"
+                    android:clickable="true"
+                    android:textColor="#C1C1C1"
+
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#6caf1d"
+                    android:lines="1"
+                    android:layout_marginTop="50dp"
+                    android:id="@+id/matchRes3"
+                    android:text="@string/large_text"
+                    android:layout_below="@+id/txtRes3"
+                    android:textSize="12sp"
+                    android:ellipsize="end"
+                    android:gravity="right"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtRes3"
+                    android:paddingTop="2dp"
+                    android:text="Place Holder"
+                    android:lines="1"
+                    android:focusableInTouchMode="true"
+                    android:textColor="#6caf1d"
+
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:clickable="true"
+                    android:layout_below="@+id/imgRes3"
+                    android:layout_alignParentStart="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="20dp"
+                    android:lines="3"
+                    android:id="@+id/charRes3"
+                    android:text="@string/large_text"
+                    android:textSize="12sp"
+                    android:ellipsize="end"
+                    android:layout_below="@+id/txtRes3"
+                    android:layout_alignStart="@+id/txtRes3" />
+
+                <ImageView
+                    android:layout_width="280dp"
+                    android:layout_height="280dp"
+                    android:id="@+id/imgRes3"
+                    android:clickable="true"
+                    android:focusableInTouchMode="true"
+                    android:layout_below="@+id/tst3"
+                    android:layout_alignParentStart="true" />
+
+            </RelativeLayout>
+            <!--
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/rel2"
+                            android:clickable="true"
+                            android:focusableInTouchMode="true"
+                            >
+                            <ImageView
+                                android:layout_width="120dp"
+                                android:layout_height="120dp"
+                                android:src="@drawable/akapulko"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentTop="true"
+                                android:id="@+id/imgRes2"
+                                android:clickable="true"
+                                android:focusableInTouchMode="true"
+                                />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/txtRes2"
+                                android:layout_marginLeft="135sp"
+                                android:paddingTop="2dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentTop="true"
+                                android:layout_toRightOf="@+id/imgRes2"
+                                android:text="Place Holder"
+                                android:lines="1"
+                                android:focusableInTouchMode="true"
+                                android:textColor="#6caf1d"
+                                android:paddingBottom="5dp"
+                                android:textAppearance="?android:textAppearanceLarge"
+                                android:clickable="true"
+                                />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingRight="20dp"
+                                android:lines="1"
+                                android:layout_marginTop="70dp"
+                                android:id="@+id/matchRes2"
+                                android:text="@string/large_text"
+                                android:layout_marginLeft="135dp"
+                                android:layout_below="@+id/txtRes2"
+                                android:textSize="12sp"
+                                android:ellipsize="end"
+                                />
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="#dcdcdc"
+                                android:layout_marginTop="2dp"
+                                android:layout_marginBottom="1dp"
+                                android:layout_below="@+id/matchRes2"
+                                android:layout_alignParentStart="true" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/txtRes1"
+                                android:layout_marginLeft="1sp"
+                                android:paddingTop="2dp"
+                                android:text="Place Holder"
+                                android:lines="1"
+                                android:focusableInTouchMode="true"
+                                android:textColor="#6caf1d"
+                                android:paddingBottom="5dp"
+                                android:textAppearance="?android:textAppearanceLarge"
+                                android:clickable="true"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_marginStart="55dp" />
+
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingRight="20dp"
+                                android:lines="2"
+                                android:id="@+id/charRes2"
+                                android:text="@string/large_text"
+                                android:layout_marginLeft="135dp"
+                                android:textSize="12sp"
+                                android:ellipsize="end"
+                                android:layout_below="@+id/txtRes2"
+                                android:layout_centerHorizontal="true" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/rel3"
+                            android:clickable="true"
+                            android:focusableInTouchMode="true"
+                            >
+                            <ImageView
+                                android:layout_width="120dp"
+                                android:layout_height="120dp"
+                                android:src="@drawable/akapulko"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentTop="true"
+                                android:id="@+id/imgRes3"
+                                android:clickable="true"
+                                android:focusableInTouchMode="true"
+                                />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/txtRes3"
+                                android:layout_marginLeft="135sp"
+                                android:paddingTop="2dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentTop="true"
+                                android:layout_toRightOf="@+id/imgRes3"
+                                android:text="Place Holder"
+                                android:lines="1"
+                                android:focusableInTouchMode="true"
+                                android:textColor="#6caf1d"
+                                android:paddingBottom="5dp"
+                                android:textAppearance="?android:textAppearanceLarge"
+                                android:clickable="true"
+                                />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingRight="20dp"
+                                android:lines="2"
+                                android:id="@+id/charRes3"
+                                android:text="@string/large_text"
+                                android:layout_marginLeft="135dp"
+                                android:layout_below="@+id/txtRes3"
+                                android:textSize="12sp"
+                                android:ellipsize="end"
+                                />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingRight="20dp"
+                                android:lines="1"
+                                android:layout_marginTop="70dp"
+                                android:id="@+id/matchRes3"
+                                android:text="@string/large_text"
+                                android:layout_marginLeft="135dp"
+                                android:layout_below="@+id/txtRes3"
+                                android:textSize="12sp"
+                                android:ellipsize="end"
+                                />
+
+                        </RelativeLayout>-->
+
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

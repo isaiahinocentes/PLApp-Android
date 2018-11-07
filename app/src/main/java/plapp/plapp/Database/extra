@@ -1,0 +1,137 @@
+dp1 = new DataProvider("0002", BitmapFactory.decodeResource(getResources(), R.drawable.akapulko),
+"Cucumis argyl H. Lev., Cucumis intermedius M. Roem., Momordica charantia Linn., Momordica chinensis Spreng, Momordica elegans Salisb., Momordica indica L., Momordica muricata Willd., Momordica sinensis Spreng., Sicyos fauriei H.Lév.",
+"Throughout the Philippines", "In the Philippines, juice expressed from the green fruit is given for chronic colitis: also used for bacillary dysentery.;Astringent powdered leaves or root decoction can be applied to hemorrhoids.;Leaf juice for cough and as a purgative and anthelminthic to expel intestinal parasites, and for healing wounds.;Seeds also used to expel worms.;The vine or the juice of leaves used as mild purgative for children.;In large doses, the fresh juice is a drastic purgative.;Decoction of roots and seeds used for urethral discharges.;Juice of leaves used for chronic coughs.;Leaves and shoots used as vulnerary.;Sap of leaves used as parasiticide.;Fruit macerated in oil used as vulnerary.;Fruit considered tonic and stomachic; used in rheumatism, gout, and diseases of the spleen and liver.;Pounded leaves used for scalds.;Infusion of leaves or leaf juice used for fevers.;Used for chronic stomach ulcers.;Root sometimes used as ingredient in aphrodisiac preparations.;Decoction of root used as abortifacient.;Fruit in large doses considered a drastic purgative and abortifacient.",
+null, "Steam ampalaya tops (upper four leaves) and eat half a cup twice daily. As a decoction, boil six tablespoons of finely chopped leaves in two glasses of water over low fire (for 15 minutes). Drink 1/3 cup, three times a day, 30 minutes before meals. Don't use aluminum pots (clay or enamel only).",
+null, "hastate, incised");
+
+
+dp2 = new DataProvider(
+"0003",
+ BitmapFactory.decodeResource(getResources(), R.drawable.akapulko),
+"Bawang",
+"Allium controversum Schrad.,Allium longicuspis Regel,Allium ophioscorodon Link,Allium pekinense Prokhanov,Allium sativum Linn.,Porum ophioscorodon (Link) Rchb.,Porum sativum (L.) Rchb. [Illegitimate]",
+"Central Luzon",
+"In the Philippines, bulbs used for hypertension. Also used as diuretic, and eaten fresh or burned for coughs in children.;Arthritis, rheumatism, toothaches: Crush several cloves and rub on affected areas.;Crush clove applied to both temples as poultice for headache.;Crush garlic or cut clove crosswise and rub directly to areas of insect bites.;Decoction of leaves and bulbs for fever and as hypotensive, carminative, expectorant, and antihelmintic.;Juice from freshly crushed garlic used for colds, cough, sore throat, hoarseness, asthma and bronchitis.;Decoction use for tonsillitis.;Steam inhalation of chopped garlic and a teaspoon of vinegar in boiling water used for nasal congestion.;Fresh garlic has been used as a complement to INH therapy for tuberculosis. In Mexico, fresh bulb is eaten as a preventive for tuberculosis.",
+null,
+" For disinfecting wound, crush and juice the garlic bulb and apply. You may cover the afflicted area with a gauze and bandage.;For sore throat, peal the skin and chew for several minutes. Swallow the juice.;For toothaches, crush then bite garlic.;For athlete’s foot, soak feet in salty water then apply garlic juice. Do this 3X day for a week.;Cloves of garlic may be crushed and applied to affected areas to reduce the pain caused by arthritis, toothache, headache, and rheumatism.;Decoction of the bawang bulbs and leaves are used as treatment for fever.;For nasal congestion, steam and inhale: vinegar, chopped garlic, and water.SIMILAR LEAVES:",
+"linear, entire");
+
+dp3 = new DataProvider(
+"004",
+ BitmapFactory.decodeResource(getResources(), R.drawable.akapulko),
+"Bayabas",
+"Guajava pumila (Vahl.) Kuntze,Guajava pyrifera (L.) Kuntze,Myrtus guajava (L.) Kuntze,Psidium angustifolium Lam.,Psidium aromaticum Blanco [Illegitimate],Psidium cujavillus Burm.f.,Psidium cujavus L,Psidium fragrans Macfad.,Psidium guajava Linn.,Psidium guajava Griseb.,Psidium igatemyensis Barb. Rodr.,Psidium intermedium Zipp. ex Blume,Psidium pomiferum Linn.,Psidium prostatum O.Berg,Psidium pumilum Vahl,Psidium pyriferum Linn.,Psidium sapidissimum Jacq.,Psidium vulgare Rich.,Syzygium ellipticum K.Schum. & Lauterb.",
+"Throughout the Philippines",
+null,
+"Boil one cup of Bayabas leaves in three cups of water for 8 to 10 minutes. Let cool.;Use decoction as mouthwash, gargle.;Use as wound disinfectant - wash affected areas with the decoction of leaves 2 to 3 times a day. Fresh leaves may be applied to the wound directly for faster healing.;For toothaches, chew the leaves in your mouth.;For diarrhea, boil the chopped leaves for 15 minutes in water, and strain. Let cool, and drink a cup every three to four hours.;To stop nosebleed, densely roll Bayabas leaves, then place in the nostril cavities.",
+null,
+"elliptical, doublyserrate");
+
+
+
+
+
+
+
+
+
+
+    public void filterData(String query) {
+        query = query.toLowerCase();
+        parentRowList.clear();
+
+        if (query.isEmpty()) {
+            parentRowList.addAll(originalList);
+        }
+        else {
+            for (ParentRow parentRow : originalList) {
+                ArrayList<ChildRow> childList = parentRow.getChildList();
+                ArrayList<ChildRow> newList = new ArrayList<ChildRow>();
+
+                for (ChildRow childRow: childList) {
+                    if (childRow.getText().toLowerCase().contains(query)) {
+                        newList.add(childRow);
+                    }
+                } // end for (com.example.user.searchviewexpandablelistview.ChildRow childRow: childList)
+                if (newList.size() > 0) {
+                    ParentRow nParentRow = new ParentRow(parentRow.getName(), newList);
+                    parentRowList.add(nParentRow);
+                }
+            } // end or (com.example.user.searchviewexpandablelistview.ParentRow parentRow : originalList)
+        } // end else
+
+        notifyDataSetChanged();
+    }
+}
+
+   @Override
+    public boolean onQueryTextChange(String query) {
+        final List<ExampleModel> filteredModelList = filter(mModels, query);
+        mAdapter.edit()
+                .replaceAll(filteredModelList)
+                .commit();
+        mBinding.recyclerView.scrollToPosition(0);
+        return true;
+    }
+
+    @Override
+    public boolean onQueryTextSubmit(String query) {
+        return false;
+    }
+
+    private static List<ExampleModel> filter(List<ExampleModel> models, String query) {
+        final String lowerCaseQuery = query.toLowerCase();
+
+        final List<ExampleModel> filteredModelList = new ArrayList<>();
+        for (ExampleModel model : models) {
+            final String text = model.getText().toLowerCase();
+            if (text.contains(lowerCaseQuery)) {
+                filteredModelList.add(model);
+            }
+        }
+        return filteredModelList;
+    }
+
+
+
+
+
+
+
+
+
+ /*    public UsesAdapter(Context context, int resource) {
+        super(context, resource);
+    }
+
+
+   @Override
+    public int getCount() {
+        return list.size();
+    }
+
+    @Override
+    public Object getItem(int position) {
+        return list.get(position);
+    }
+
+    @Override
+    public View getView(int position, View convertView, ViewGroup parent) {
+        View use = convertView;
+        Holder holder;
+        if(use==null){
+            LayoutInflater layoutInflater = (LayoutInflater)this.getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            use = layoutInflater.inflate(R.layout.recyclerlist_item,parent,false);
+            holder= new Holder();
+            holder.usesView=(TextView) use.findViewById(R.id.listitem_name);
+            use.setTag(holder);
+        }else{
+            holder=(Holder)use.getTag();
+        }
+
+        DataProvider dataProvider = (DataProvider)getItem(position);
+        holder.usesView.setText(dataProvider.getLeaf_use().toString());
+        return use;
+
+
+    }*/

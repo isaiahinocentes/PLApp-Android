@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    package="viralandroid.com.androiduserinterfacetutorial">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        app:theme="@style/ThemeOverlay.AppCompat.ActionBar" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="android.app.searchable"
+            android:resource="@xml/searchable" />
+
+        <activity
+            android:name="plapp.plapp.SplashActivity"
+            android:label="@string/app_name"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+        </activity>
+        <activity android:name="plapp.plapp.MainActivity" />
+        <activity android:name="plapp.plapp.Searching.GridSearch" />
+        <activity android:name="plapp.plapp.Searching.viewACategory" />
+        <activity android:name="plapp.plapp.Viewing.ViewHowToUse" />
+        <activity android:name="plapp.plapp.Searching.CategoryMain" />
+        <activity android:name="plapp.plapp.ManualSearching" />
+        <activity
+            android:name="plapp.plapp.Viewing.ViewLeaf"
+            android:label="@string/title_activity_view_leaf"
+            android:theme="@style/AppTheme" />
+        <activity android:name="plapp.plapp.PictureSearch" />
+        <activity android:name="plapp.plapp.PictureSearchResult" />
+        <activity android:name="plapp.plapp.Main_Gallery"></activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView2" >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:ems="10"
+                android:id="@+id/leafId"
+                android:hint="leaf id" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="84dp"
+                android:inputType="textMultiLine"
+                android:ems="10"
+                android:id="@+id/localName"
+                android:hint="local name (seperate by comma)" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="87dp"
+                android:inputType="textMultiLine"
+                android:ems="10"
+                android:id="@+id/scientificName"
+                android:hint="scientific name (seperate by comma)"
+                android:layout_gravity="center_horizontal" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:ems="10"
+                android:id="@+id/location"
+                android:hint="location (seperate by comma)"
+                android:layout_gravity="center_horizontal" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="91dp"
+                android:inputType="textMultiLine"
+                android:ems="10"
+                android:id="@+id/usesLeaf"
+                android:hint="uses"
+                android:layout_gravity="center_horizontal" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="76dp"
+                android:inputType="textMultiLine"
+                android:ems="10"
+                android:id="@+id/characteristics"
+                android:hint="characteristics"
+                android:layout_gravity="center_horizontal" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="textMultiLine"
+                android:ems="10"
+                android:id="@+id/howTo"
+                android:layout_gravity="center_horizontal"
+                android:hint="how to use" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:ems="10"
+                android:id="@+id/similarLeaf"
+                android:layout_gravity="center_horizontal"
+                android:hint="similar leaves" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:ems="10"
+                android:id="@+id/category"
+                android:layout_gravity="center_horizontal"
+                android:hint="categories" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1">
+
+                <Button
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="back"
+                    android:id="@+id/backBtn"
+                    android:layout_margin="5dp" />
+
+                <Button
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="reset"
+                    android:id="@+id/resetBtn"
+                    android:layout_weight="0.15"
+                    android:layout_margin="5dp" />
+
+                <Button
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="add"
+                    android:id="@+id/addBtn"
+                    android:layout_weight="0.77"
+                    android:layout_margin="5dp"
+                    android:onClick="addRecord"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:id="@+id/editText"
+        android:text="characteristics"
+        android:layout_gravity="center_horizontal" />
+
+</LinearLayout>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar18"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:popupTheme="@style/AppTheme.PopupOverlay"
+        app:elevation="0dp"/>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:layout_marginTop="100dp"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/leafshapes"
+        >
+        <ImageView
+            android:layout_width="140dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/ms_shape_hastate"
+            android:id="@+id/shapes"
+            />
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:text="LEAF BASIC SHAPES"
+            android:id="@+id/shapte"
+            android:layout_marginTop="30dp"
+            android:textStyle="bold"
+            android:textColor="#1e1e1e"
+            />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Leaves based on their structure, shapes"
+                android:layout_below="@+id/shapte"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:layout_marginTop="0dp"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/leafmargins"
+        >
+        <ImageView
+            android:layout_width="140dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/ms_contour_margin_sinuate"
+            android:id="@+id/margin"
+            />
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:text="LEAF MARGIN SHAPES"
+                android:id="@+id/margi"
+                android:layout_marginTop="30dp"
+                android:textStyle="bold"
+                android:textColor="#1e1e1e"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Leaves based on their unique margin or sides"
+                android:layout_below="@+id/margi"
+
+                android:paddingRight="20dp"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>
